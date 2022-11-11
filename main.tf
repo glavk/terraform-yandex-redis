@@ -47,7 +47,7 @@ resource "yandex_mdb_redis_cluster" "this" {
 
   security_group_ids = var.security_group_ids
 
-  labels = var.labels
+  #labels = var.labels
 
   maintenance_window {
     type = var.type
