@@ -17,7 +17,7 @@ data "yandex_vpc_subnet" "private" {
 
 module "cache" {
   source  = "glavk/redis/yandex"
-  version = "0.1.0"
+  version = "0.1.4"
 
   name        = "cache"
   description = "Cache in-memory without sync to disk"

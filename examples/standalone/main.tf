@@ -17,7 +17,7 @@ data "yandex_vpc_subnet" "private" {
 
 module "standalone" {
   source  = "glavk/redis/yandex"
-  version = "0.1.0"
+  version = "0.1.4"
 
   name        = "standalone"
   description = "Standalone zonal cluster"
