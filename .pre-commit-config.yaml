@@ -9,3 +9,6 @@ repos:
     rev: v1.71.0
     hooks:
       - id: terraform_docs
+        args:
+          - --hook-config=--add-to-exiting-file=true
+          - --hook-config=--create-file-if-not-exist=true
