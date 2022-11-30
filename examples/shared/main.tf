@@ -17,7 +17,7 @@ data "yandex_vpc_subnet" "private" {
 
 module "sharded_zone" {
   source  = "glavk/redis/yandex"
-  version = "0.1.4"
+  version = "0.1.6"
 
   name        = "sharded_cluster"
   description = "Sharded zonal cluster"

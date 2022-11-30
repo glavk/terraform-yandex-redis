@@ -15,7 +15,7 @@ variable "environment" {
 
   validation {
     condition     = contains(["PRODUCTION", "PRESTABLE"], var.environment)
-    error_message = "environment should be one of `PRODUCTION` or `PRESTABLE`"
+    error_message = "Environment should be one of `PRODUCTION` or `PRESTABLE`."
   }
 }
 
@@ -31,11 +31,11 @@ variable "folder_id" {
   default     = null
 }
 
-variable "labels" {
-  description = "A set of key/value label pairs to assign to the Redis cluster"
-  type        = set(string)
-  default     = null
-}
+#variable "labels" {
+#  description = "A set of key/value label pairs to assign to the Redis cluster"
+#  type        = set(string)
+#  default     = null
+#}
 
 variable "sharded" {
   description = "Redis Cluster mode enabled/disabled"
@@ -56,7 +56,7 @@ variable "persistence_mode" {
 
   validation {
     condition     = contains(["ON", "OFF"], var.persistence_mode)
-    error_message = "persistence_mode should be one of `ON` or `OFF`"
+    error_message = "Persistence_mode should be one of `ON` or `OFF`."
   }
 }
 
@@ -101,7 +101,7 @@ variable "maxmemory_policy" {
       "ALLKEYS_RANDOM",
       "VOLATILE_TTL"
     ], var.maxmemory_policy)
-    error_message = "maxmemory_policy should be one of `VOLATILE_LRU`, `ALLKEYS_LRU`, `VOLATILE_LFU`, `VOLATILE_RANDOM`, `NOEVICTION`, `MAXMEMORY_POLICY_UNSPECIFIED`, `ALLKEYS_LFU`, `ALLKEYS_RANDOM`, `VOLATILE_TTL`."
+    error_message = "Maxmemory_policy should be one of `VOLATILE_LRU`, `ALLKEYS_LRU`, `VOLATILE_LFU`, `VOLATILE_RANDOM`, `NOEVICTION`, `MAXMEMORY_POLICY_UNSPECIFIED`, `ALLKEYS_LFU`, `ALLKEYS_RANDOM`, `VOLATILE_TTL`."
   }
 }
 
@@ -167,7 +167,7 @@ variable "disk_type_id" {
 
   validation {
     condition     = contains(["network-ssd", "local-ssd", "network-ssd-nonreplicated"], var.disk_type_id)
-    error_message = "disk_type_id be one of `network-ssd`, `local-ssd`, `network-ssd-nonreplicated`"
+    error_message = "Disk_type_id be one of `network-ssd`, `local-ssd`, `network-ssd-nonreplicated`."
   }
 }
 
@@ -177,7 +177,7 @@ variable "zone" {
 
   validation {
     condition     = contains(["ru-central1-a", "ru-central1-b", "ru-central1-c"], var.zone)
-    error_message = "zone must be one of `ru-central1-a`, `ru-central1-b`, `ru-central1-c` (with limitations)"
+    error_message = "Zone must be one of `ru-central1-a`, `ru-central1-b`, `ru-central1-c` (with limitations)."
   }
 }
 
@@ -212,7 +212,7 @@ variable "type" {
 
   validation {
     condition     = contains(["ANYTIME", "WEEKLY"], var.type)
-    error_message = "type must be one of `ANYTIME`, `WEEKLY`"
+    error_message = "Type must be one of `ANYTIME`, `WEEKLY`."
   }
 }
 
@@ -229,7 +229,7 @@ variable "day" {
 
   validation {
     condition     = contains(["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"], var.day)
-    error_message = "day must be one of `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`"
+    error_message = "Day must be one of `MON`, `TUE`, `WED`, `THU`, `FRI`, `SAT`, `SUN`."
   }
 }
 

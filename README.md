@@ -28,7 +28,7 @@ data "yandex_vpc_subnet" "private" {
 
 module "cache" {
   source  = "glavk/redis/yandex"
-  version = "0.1.0"
+  version = "0.1.6"
 
   name        = "cache"
   description = "Cache in-memory without sync to disk"
@@ -75,7 +75,7 @@ data "yandex_vpc_subnet" "private" {
 
 module "sharded_zone" {
   source  = "glavk/redis/yandex"
-  version = "0.1.4"
+  version = "0.1.6"
 
   name        = "sharded_cluster"
   description = "Sharded zonal cluster"
@@ -148,7 +148,6 @@ No modules.
 | <a name="input_folder_id"></a> [folder\_id](#input\_folder\_id) | The ID of the folder that the resource belongs to. If it is not provided, the default provider folder is used | `string` | `null` | no |
 | <a name="input_hosts"></a> [hosts](#input\_hosts) | Redis hosts definition | <pre>map(object({<br>    zone      = string<br>    subnet_id = string<br>  }))</pre> | <pre>{<br>  "host1": {<br>    "subnet_id": "",<br>    "zone": "ru-central1-a"<br>  },<br>  "host2": {<br>    "subnet_id": "",<br>    "zone": "ru-central1-a"<br>  }<br>}</pre> | no |
 | <a name="input_hour"></a> [hour](#input\_hour) | Hour of day in UTC time zone (1-24) for maintenance window if window type is weekly | `number` | `24` | no |
-| <a name="input_labels"></a> [labels](#input\_labels) | A set of key/value label pairs to assign to the Redis cluster | `set(string)` | `null` | no |
 | <a name="input_maxmemory_policy"></a> [maxmemory\_policy](#input\_maxmemory\_policy) | Redis key eviction policy for a dataset that reaches maximum memory. See https://docs.redis.com/latest/rs/databases/memory-performance/eviction-policy/ | `string` | `"NOEVICTION"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the Redis cluster | `string` | n/a | yes |
 | <a name="input_network_id"></a> [network\_id](#input\_network\_id) | ID of the network, to which the Redis cluster belongs | `string` | n/a | yes |
