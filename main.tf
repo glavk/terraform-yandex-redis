@@ -38,7 +38,7 @@ resource "yandex_mdb_redis_cluster" "this" {
       zone      = lookup(host.value, "zone", var.zone)
       subnet_id = lookup(host.value, "subnet_id", var.subnet_id)
 
-      shard_name = var.sharded ? "shard-${host.key}" : host.key
+      shard_name = var.sharded ? "shard-${host.key}" : null
 
       replica_priority = var.sharded ? null : var.replica_priority
       assign_public_ip = var.tls_enabled ? lookup(host.value, "assign_public_ip", var.assign_public_ip) : false
