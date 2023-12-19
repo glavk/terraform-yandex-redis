@@ -136,8 +136,8 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_assign_public_ip"></a> [assign\_public\_ip](#input\_assign\_public\_ip) | Sets whether the host should get a public IP address or not | `bool` | `false` | no |
-| <a name="input_client_output_buffer_limit_normal"></a> [client\_output\_buffer\_limit\_normal](#input\_client\_output\_buffer\_limit\_normal) | Normal clients output buffer limits (bytes) | `string` | `"60 536870912 1073741824"` | no |
-| <a name="input_client_output_buffer_limit_pubsub"></a> [client\_output\_buffer\_limit\_pubsub](#input\_client\_output\_buffer\_limit\_pubsub) | Pubsub clients output buffer limits (bytes) | `string` | `"60 536870912 1073741824"` | no |
+| <a name="input_client_output_buffer_limit_normal"></a> [client\_output\_buffer\_limit\_normal](#input\_client\_output\_buffer\_limit\_normal) | Normal clients output buffer limits (bytes) | `string` | `"1073741824 536870912 60"` | no |
+| <a name="input_client_output_buffer_limit_pubsub"></a> [client\_output\_buffer\_limit\_pubsub](#input\_client\_output\_buffer\_limit\_pubsub) | Pubsub clients output buffer limits (bytes) | `string` | `"1073741824 536870912 60"` | no |
 | <a name="input_databases"></a> [databases](#input\_databases) | Number of databases (changing requires redis-server restart) | `number` | `16` | no |
 | <a name="input_day"></a> [day](#input\_day) | Day of week for maintenance window if window type is weekly | `string` | `"MON"` | no |
 | <a name="input_deletion_protection"></a> [deletion\_protection](#input\_deletion\_protection) | Inhibits deletion of the cluster | `bool` | `false` | no |

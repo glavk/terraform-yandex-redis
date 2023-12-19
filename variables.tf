@@ -138,13 +138,13 @@ variable "redis_version" {
 variable "client_output_buffer_limit_normal" {
   description = "Normal clients output buffer limits (bytes)"
   type        = string
-  default     = "60 536870912 1073741824"
+  default     = "1073741824 536870912 60"
 }
 
 variable "client_output_buffer_limit_pubsub" {
   description = "Pubsub clients output buffer limits (bytes)"
   type        = string
-  default     = "60 536870912 1073741824"
+  default     = "1073741824 536870912 60"
 }
 
 // https://cloud.yandex.com/en/docs/managed-redis/concepts/instance-types
